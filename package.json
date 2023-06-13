@@ -1,6 +1,7 @@
 {
   "name": "typescript-design-patterns",
   "private": true,
+  "type": "module",
   "description": "Design patterns implemented in TypeScript",
   "author": "coding-freedom <iamcodingfreedom@gmail.com>",
   "license": "MIT",

@@ -10,7 +10,7 @@ cd typescript-design-patterns
 pnpm i
 ```
 
-then, you can run directly the ts files, for example:
+then you can run ts files directly without compiling ts to js
 
 ```
 pnpm tsx singleton
