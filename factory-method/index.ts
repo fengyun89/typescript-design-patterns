@@ -1,13 +1,13 @@
 import FileType from "./FileType";
-import ParserFactory from "./ParserFactory";
+import CreatorFactory from "./CreatorFactory";
 
 const csvData = "csv data";
 const xmlData = "xml data";
 const jsonData = "json data";
 
 const parseData = (type: FileType, data: string) => {
-  const parser = ParserFactory.getParser(type);
-  return parser.parse(data);
+  const creator = CreatorFactory.getCreator(type);
+  return creator.create().parse(data);
 };
 
 parseData(FileType.CSV, csvData);

@@ -5,7 +5,7 @@ import Parser from "./Parser";
 import XMLParser from "./XMLParser";
 
 class ParserFactory {
-  public static createParser(type: FileType): Parser {
+  public static getParser(type: FileType): Parser {
     switch (type) {
       case FileType.CSV:
         return new CSVParser();
