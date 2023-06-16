@@ -5,7 +5,7 @@ class Facade {
   private subsystem1: Subsystem1;
   private subsystem2: Subsystem2;
 
-  constructor(subsystem1: Subsystem1, subsystem2: Subsystem2) {
+  constructor(subsystem1?: Subsystem1, subsystem2?: Subsystem2) {
     this.subsystem1 = subsystem1 || new Subsystem1();
     this.subsystem2 = subsystem2 || new Subsystem2();
   }
