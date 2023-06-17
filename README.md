@@ -39,4 +39,4 @@ pnpm tsx singleton
 
 解决对象行为方面的一些问题的模式，称之为行为型模式
 
-- 如何？
+- 如何让多个对象都有机会处理请求？[责任链模式](./chain-of-responsibility/)
