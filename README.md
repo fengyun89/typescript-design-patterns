@@ -1,8 +1,8 @@
-# Design patterns implemented in TypeScript
+# TypeScript设计模式
 
-## How to run
+## 如何运行示例
 
-clone the repo and install dependencies
+克隆代码并安装依赖
 
 ```
 git clone https://github.com/coding-freedom/typescript-design-patterns.git
@@ -10,7 +10,7 @@ cd typescript-design-patterns
 pnpm i
 ```
 
-then you can run ts files directly without compiling ts to js
+借助 [tsx](https://github.com/esbuild-kit/tsx) 直接运行 ts 文件，无需编译为 js 文件，如运行单例模式示例
 
 ```
 pnpm tsx singleton
