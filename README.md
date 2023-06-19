@@ -42,3 +42,5 @@ pnpm tsx singleton
 - 如何让多个对象都有机会处理请求？[责任链模式](./chain-of-responsibility/)
 - 如何将请求转换为对象？[命令模式](./command/)
 - 如何遍历一个聚合对象？[迭代器模式](./iterator/)
+- 如何减少对象间的耦合？[中介者模式](./mediator/)
+- 如何保存和恢复对象的状态？[备忘录模式](./memento/)
