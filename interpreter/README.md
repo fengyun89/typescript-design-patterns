@@ -30,7 +30,12 @@ classDiagram
         +interpret(Context) number
     }
     Context <.. Expression
+    Context <.. TerminalExpression
+    Context <.. AddExpression
+    Context <.. SubtractExpression
     Expression <|-- TerminalExpression
     Expression <|-- AddExpression
     Expression <|-- SubtractExpression
+    Expression <-- AddExpression
+    Expression <-- SubtractExpression
 ```
