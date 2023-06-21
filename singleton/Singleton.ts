@@ -5,7 +5,7 @@ class Singleton {
 
   public static getInstance(): Singleton {
     if (!Singleton.instance) {
-      Singleton.instance = new Singleton();
+      this.instance = new Singleton();
     }
     return Singleton.instance;
   }
