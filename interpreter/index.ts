@@ -14,5 +14,4 @@ const z = new TerminalExpression("z");
 
 const add = new AddExpression(x, y);
 const subtract = new SubtractExpression(add, z);
-const result = subtract.interpret(context);
-console.log(result);
+console.log(subtract.interpret(context));
