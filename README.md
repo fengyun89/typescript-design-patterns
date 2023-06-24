@@ -66,5 +66,5 @@ pnpm tsx singleton
 - [迭代器模式](./iterator/)
 - [备忘录模式](./memento/)
 - [状态模式](./state/)
-- 如何让一组行为有不同的表现？[策略模式](./strategy/)
+- [策略模式](./strategy/)
 - 如何在不修改类层次结构的前提下增加新的行为？[访问者模式](./visitor/)
