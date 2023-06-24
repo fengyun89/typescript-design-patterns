@@ -58,7 +58,7 @@ pnpm tsx singleton
 
 - [中介者模式](./mediator/)
 - [责任链模式](./chain-of-responsibility/)
-- 如何将一个对象的状态改变通知给其他对象？[观察者模式](./observer/)
+- [观察者模式](./observer/)
 
 其他的对象行为型模式将行为封装在一个对象中并将请求指派给它
 

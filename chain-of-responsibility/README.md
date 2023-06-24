@@ -23,7 +23,9 @@ classDiagram
     class DogHandler {
         +handle(string request)
     }
+    Handler <.. Handler
     Handler <|.. AbstractHandler
+    Handler <-- AbstractHandler
     AbstractHandler <|-- MonkeyHandler
     AbstractHandler <|-- SquirrelHandler
     AbstractHandler <|-- DogHandler
