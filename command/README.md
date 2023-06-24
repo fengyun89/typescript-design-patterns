@@ -24,8 +24,8 @@ classDiagram
         +setOnFinish(Command command)
         +run()
     }
-    SimpleCommand ..|> Command
-    ComplexCommand ..|> Command
-    ComplexCommand --> Receiver
-    Invoker --> Command
+    Command <|.. SimpleCommand 
+    Command <|.. ComplexCommand 
+    Receiver <-- ComplexCommand 
+    Command <-- Invoker 
 ```

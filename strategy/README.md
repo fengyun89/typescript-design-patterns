@@ -18,7 +18,7 @@ classDiagram
         +setStrategy(Strategy strategy)
         +doSomeBusinessLogic()
     }
-    ConcreteStrategyA ..|> Strategy
-    ConcreteStrategyB ..|> Strategy
-    Context o--> Strategy
+    Strategy <|.. ConcreteStrategyA 
+    Strategy <|.. ConcreteStrategyB 
+    Strategy <--o Context 
 ```

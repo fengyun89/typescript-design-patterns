@@ -9,9 +9,14 @@ classDiagram
         #primitiveOperation1()*
         #primitiveOperation2()*
     }
-    class ConcreteClass {
+    class ConcreteClass1 {
         #primitiveOperation1()
         #primitiveOperation2()
     }
-    AbstractClass <|-- ConcreteClass
+    class ConcreteClass2 {
+        #primitiveOperation1()
+        #primitiveOperation2()
+    }
+    AbstractClass <|-- ConcreteClass1
+    AbstractClass <|-- ConcreteClass2
 ```

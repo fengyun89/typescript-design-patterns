@@ -20,6 +20,6 @@ classDiagram
         +addMemento(memento: Memento)
         +getMemento(index: number) Memento
     }
-    Originator ..> Memento
-    Caretaker --> Memento
+    Memento <.. Originator 
+    Memento <-- Caretaker 
 ```

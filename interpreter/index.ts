@@ -2,6 +2,11 @@ import Context from "./Context";
 import TerminalExpression from "./TerminalExpression";
 import AddExpression from "./AddExpression";
 import SubtractExpression from "./SubtractExpression";
+import Expression from "./Expression";
+
+const clientCode = (expression: Expression, context: Context) => {
+  console.log(expression.interpret(context));
+};
 
 const context = new Context();
 context.setVariable("x", 5);
@@ -14,4 +19,5 @@ const z = new TerminalExpression("z");
 
 const add = new AddExpression(x, y);
 const subtract = new SubtractExpression(add, z);
-console.log(subtract.interpret(context));
+
+clientCode(subtract, context);

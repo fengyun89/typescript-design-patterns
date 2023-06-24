@@ -20,8 +20,8 @@ classDiagram
         +transitionTo(State state)
         +request()
     }
-    ConcreteStateA --|> State
-    ConcreteStateB --|> State
-    Context o--> State
-    State --> Context
+    State <|-- ConcreteStateA 
+    State <|-- ConcreteStateB 
+    State <--o Context 
+    Context <-- State 
 ```

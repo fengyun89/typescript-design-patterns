@@ -24,8 +24,9 @@ classDiagram
         +notify()
         +someBusinessLogic()
     }
-    ConcreteObserver ..|> Observer
-    ConcreteSubject ..|> Subject
-    Subject --> Observer
-    ConcreteObserver ..> ConcreteSubject
+    Observer <|.. ConcreteObserver 
+    Subject <|.. ConcreteSubject 
+    Observer <.. Subject 
+    ConcreteSubject <.. ConcreteObserver 
+    Observer <-- ConcreteSubject
 ```

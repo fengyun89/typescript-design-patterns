@@ -27,8 +27,8 @@ classDiagram
     }
     Mediator <|.. ConcreteMediator
     Mediator <-- BaseComponent
-    ConcreteMediator --> Component1
-    ConcreteMediator --> Component2
+    Component1 <-- ConcreteMediator
+    Component2 <-- ConcreteMediator 
     BaseComponent <|-- Component1
     BaseComponent <|-- Component2
 ```

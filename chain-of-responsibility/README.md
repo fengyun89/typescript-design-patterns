@@ -14,19 +14,19 @@ classDiagram
         +setNext(Handler handler) Handler
         +handle(string request)
     }
-    class MonkeyHandler {
+    class ConcreteHandler1 {
         +handle(string request)
     }
-    class SquirrelHandler {
+    class ConcreteHandler2 {
         +handle(string request)
     }
-    class DogHandler {
+    class ConcreteHandler3 {
         +handle(string request)
     }
     Handler <.. Handler
     Handler <|.. AbstractHandler
     Handler <-- AbstractHandler
-    AbstractHandler <|-- MonkeyHandler
-    AbstractHandler <|-- SquirrelHandler
-    AbstractHandler <|-- DogHandler
+    AbstractHandler <|-- ConcreteHandler1
+    AbstractHandler <|-- ConcreteHandler2
+    AbstractHandler <|-- ConcreteHandler3
 ```

@@ -18,6 +18,6 @@ classDiagram
         +addItem()
         +getIterator() Iterator
     }
-    ConcteteIterator ..|> Iterator
-    Aggregate --> Iterator
+    Iterator <|.. ConcteteIterator 
+    Iterator <-- Aggregate 
 ```
