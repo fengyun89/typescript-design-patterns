@@ -1,7 +1,7 @@
-import MyIterator from "./MyIterator";
+import ConcteteIterator from "./ConcteteIterator";
 import Iterator from "./Iterator";
 
-class MyCollection {
+class Aggregate {
   private collection: string[] = [];
 
   public addItem(item: string): void {
@@ -9,8 +9,8 @@ class MyCollection {
   }
 
   public getIterator(): Iterator {
-    return new MyIterator(this.collection);
+    return new ConcteteIterator(this.collection);
   }
 }
 
-export default MyCollection;
+export default Aggregate;

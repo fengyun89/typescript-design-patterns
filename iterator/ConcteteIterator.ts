@@ -1,6 +1,6 @@
 import Iterator from "./Iterator";
 
-class MyIterator implements Iterator {
+class ConcteteIterator implements Iterator {
   private index: number = 0;
   private collection: string[] = [];
 
@@ -19,4 +19,4 @@ class MyIterator implements Iterator {
   }
 }
 
-export default MyIterator;
+export default ConcteteIterator;
