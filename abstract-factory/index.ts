@@ -1,18 +1,14 @@
-import FileType from "./FileType";
-import CreatorFactory from "./CreatorFactory";
+import AbstractFactory from "./AbstractFactory";
+import ConcreteFactory1 from "./ConcreteFactory1";
+import ConcreteFactory2 from "./ConcreteFactory2";
 
-const csvData = "csv data";
-const xmlData = "xml data";
-const jsonData = "json data";
+const clientCode = (creator: AbstractFactory) => {
+  const productA = creator.createProductA();
+  const productB = creator.createProductB();
 
-const parseData = (type: FileType, data: string) => {
-  const creator = CreatorFactory.getCreator(type);
-  const parser = creator.createParser();
-  const reader = creator.createReader();
-  parser.parse(data);
-  console.log(reader.read());
+  productA.operationA();
+  productB.operationB();
 };
 
-parseData(FileType.CSV, csvData);
-parseData(FileType.XML, xmlData);
-parseData(FileType.JSON, jsonData);
+clientCode(new ConcreteFactory1());
+clientCode(new ConcreteFactory2());

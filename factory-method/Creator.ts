@@ -1,7 +1,7 @@
-import Parser from "./Parser";
+import Product from "./Product";
 
-abstract class Creator {
-  public abstract create(): Parser;
+interface Creator {
+  factoryMethod(): Product;
 }
 
 export default Creator;

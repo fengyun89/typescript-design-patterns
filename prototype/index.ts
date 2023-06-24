@@ -1,6 +1,6 @@
 import ConcretePrototype from "./ConcretePrototype";
 
-const prototype = new ConcretePrototype("Hello");
+const prototype = new ConcretePrototype();
 const clonedPrototype = prototype.clone();
 
-console.log(clonedPrototype.name);
+console.log("prototype === clonedPrototype", prototype === clonedPrototype);

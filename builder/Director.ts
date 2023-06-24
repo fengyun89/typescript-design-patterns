@@ -1,3 +1,4 @@
+import ConcreteBuilder from "./ConcreteBuilder";
 import Builder from "./Builder";
 
 class Director {
@@ -8,13 +9,13 @@ class Director {
   }
 
   public buildMinimalViableProduct(): void {
-    this.builder.buildPart1();
+    this.builder.buildPartA();
   }
 
   public buildFullFeaturedProduct(): void {
-    this.builder.buildPart1();
-    this.builder.buildPart2();
-    this.builder.buildPart3();
+    this.builder.buildPartA();
+    this.builder.buildPartB();
+    this.builder.buildPartC();
   }
 }
 

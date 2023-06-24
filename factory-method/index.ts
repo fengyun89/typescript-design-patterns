@@ -1,15 +1,11 @@
-import FileType from "./FileType";
-import CreatorFactory from "./CreatorFactory";
+import Creator from "./Creator";
+import ConcreteCreatorA from "./ConcreteCreatorA";
+import ConcreteCreatorB from "./ConcreteCreatorB";
 
-const csvData = "csv data";
-const xmlData = "xml data";
-const jsonData = "json data";
-
-const parseData = (type: FileType, data: string) => {
-  const creator = CreatorFactory.getCreator(type);
-  return creator.create().parse(data);
+const clientCode = (creator: Creator) => {
+  const product = creator.factoryMethod();
+  product.operation();
 };
 
-parseData(FileType.CSV, csvData);
-parseData(FileType.XML, xmlData);
-parseData(FileType.JSON, jsonData);
+clientCode(new ConcreteCreatorA());
+clientCode(new ConcreteCreatorB());

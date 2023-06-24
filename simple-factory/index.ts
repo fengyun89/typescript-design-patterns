@@ -1,15 +1,9 @@
-import FileType from "./FileType";
-import ParserFactory from "./ParserFactory";
+import SimpleFactory from "./SimpleFactory";
 
-const csvData = "csv data";
-const xmlData = "xml data";
-const jsonData = "json data";
-
-const parseData = (type: FileType, data: string) => {
-  const parser = ParserFactory.getParser(type);
-  return parser.parse(data);
+const clientCode = (type: string) => {
+  const product = SimpleFactory.createProduct(type);
+  product.operation();
 };
 
-parseData(FileType.CSV, csvData);
-parseData(FileType.XML, xmlData);
-parseData(FileType.JSON, jsonData);
+clientCode("A");
+clientCode("B");
