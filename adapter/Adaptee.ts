@@ -1,6 +1,6 @@
 class Adaptee {
-  public specificRequest(): string {
-    return "specific request";
+  public specificRequest(): void {
+    console.log("Adaptee: specificRequest");
   }
 }
 

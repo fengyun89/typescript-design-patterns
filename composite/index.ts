@@ -1,6 +1,10 @@
 import Leaf from "./Leaf";
 import Composite from "./Composite";
 
+const clientCode = (component: Composite) => {
+  component.operation();
+};
+
 const leaf1 = new Leaf("Leaf 1");
 const leaf2 = new Leaf("Leaf 2");
 const leaf3 = new Leaf("Leaf 3");
@@ -18,4 +22,4 @@ const rootComposite = new Composite();
 rootComposite.add(composite1);
 rootComposite.add(composite2);
 
-rootComposite.operation();
+clientCode(rootComposite);

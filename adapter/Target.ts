@@ -1,7 +1,5 @@
-class Target {
-  public request(): string {
-    return "Target: The default target's behavior.";
-  }
+interface Target {
+  request(): void;
 }
 
 export default Target;

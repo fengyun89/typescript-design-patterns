@@ -5,7 +5,7 @@ title: 工厂方法模式
 classDiagram
     class Product {
         <<interface>>
-        +operation()
+        +operation()*
     }
     class ConcreteProductA {
         +operation()
@@ -15,7 +15,7 @@ classDiagram
     }
     class Creator {
         <<interface>>
-        +factoryMethod() Product
+        +factoryMethod()* Product
     }
     class ConcreteCreatorA {
         +factoryMethod() Product

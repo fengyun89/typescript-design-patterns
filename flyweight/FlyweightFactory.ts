@@ -1,37 +1,19 @@
 import Flyweight from "./Flyweight";
+import ConcreteFlyweight from "./ConcreteFlyweight";
 
 class FlyweightFactory {
   private flyweights: { [key: string]: Flyweight } = {};
 
-  constructor(initialFlyweights: string[][]) {
-    for (const state of initialFlyweights) {
-      this.flyweights[this.getKey(state)] = new Flyweight(state);
-    }
-  }
-
-  private getKey(state: string[]): string {
-    return state.join("_");
-  }
-
-  public getFlyweight(sharedState: string[]): Flyweight {
-    const key = this.getKey(sharedState);
-
+  public getFlyweight(key: string): Flyweight {
     if (!(key in this.flyweights)) {
-      console.log(
-        "FlyweightFactory: Can't find a flyweight, creating new one."
-      );
-      this.flyweights[key] = new Flyweight(sharedState);
-    } else {
-      console.log("FlyweightFactory: Reusing existing flyweight.");
+      this.flyweights[key] = new ConcreteFlyweight(key);
     }
-
     return this.flyweights[key];
   }
 
   public listFlyweights(): void {
     const count = Object.keys(this.flyweights).length;
-    console.log(`\nFlyweightFactory: I have ${count} flyweights:`);
-
+    console.log(`FlyweightFactory: I have ${count} flyweights:`);
     for (const key in this.flyweights) {
       console.log(key);
     }

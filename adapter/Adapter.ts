@@ -1,17 +1,16 @@
 import Target from "./Target";
 import Adaptee from "./Adaptee";
 
-class Adapter extends Target {
+class Adapter implements Target {
   private adaptee: Adaptee;
 
   constructor(adaptee: Adaptee) {
-    super();
     this.adaptee = adaptee;
   }
 
-  public request(): string {
-    const result = this.adaptee.specificRequest().split("").reverse().join("");
-    return `Adapter: (TRANSLATED) ${result}`;
+  public request() {
+    console.log("Adapter:");
+    this.adaptee.specificRequest();
   }
 }
 

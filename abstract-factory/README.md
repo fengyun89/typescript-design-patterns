@@ -5,7 +5,7 @@ title: 抽象工厂模式
 classDiagram
     class ProductA {
         <<interface>>
-        +operationA()
+        +operationA()*
     }
     class ConcreteProductA1 {
         +operationA()
@@ -15,7 +15,7 @@ classDiagram
     }
     class ProductB {
         <<interface>>
-        +operationB()
+        +operationB()*
     }
     class ConcreteProductB1 {
         +operationB()
@@ -25,8 +25,8 @@ classDiagram
     }
     class AbstractFactory {
         <<interface>>
-        +createProductA() ProductA
-        +createProductB() ProductB
+        +createProductA()* ProductA
+        +createProductB()* ProductB
     }
     class ConcreteFactory1 {
         +createProductA() ProductA

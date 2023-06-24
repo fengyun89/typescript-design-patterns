@@ -10,10 +10,10 @@ classDiagram
     }
     class Builder {
         <<interface>>
-        +buildPartA()
-        +buildPartB()
-        +buildPartC()
-        +getProduct() Product
+        +buildPartA()*
+        +buildPartB()*
+        +buildPartC()*
+        +getProduct()* Product
     }
     class ConcreteBuilder {
         +buildPartA()
