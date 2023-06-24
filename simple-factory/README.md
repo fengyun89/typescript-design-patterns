@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: 工厂方法模式
+title: 简单工厂模式
 ---
 classDiagram
     class Product {
@@ -18,6 +18,6 @@ classDiagram
     }
     Product <|-- ConcreteProductA 
     Product <|-- ConcreteProductB 
-    ConcreteProductA ..> SimpleFactory 
-    ConcreteProductB ..> SimpleFactory 
+    ConcreteProductA <.. SimpleFactory 
+    ConcreteProductB <.. SimpleFactory 
 ```

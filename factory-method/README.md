@@ -24,10 +24,10 @@ classDiagram
         +factoryMethod() Product
     }
     Product <|-- ConcreteProductA
-    Product <|-- ConcreteProductB 
-    Creator <|-- ConcreteCreatorA 
-    Creator <|-- ConcreteCreatorB 
-    Product <.. Creator 
-    ConcreteProductA <.. ConcreteCreatorA 
-    ConcreteProductB <.. ConcreteCreatorB 
+    Product <.. Creator
+    Product <|-- ConcreteProductB
+    ConcreteProductA <.. ConcreteCreatorA
+    Creator <|-- ConcreteCreatorA
+    Creator <|-- ConcreteCreatorB
+    ConcreteProductB <.. ConcreteCreatorB
 ```

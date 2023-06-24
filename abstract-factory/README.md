@@ -36,14 +36,14 @@ classDiagram
         +createProductA() ProductA
         +createProductB() ProductB
     }
-    ProductA <|.. ConcreteProductA1
-    ProductA <|.. ConcreteProductA2 
-    ProductB <|.. ConcreteProductB1 
-    ProductB <|.. ConcreteProductB2 
-    AbstractFactory <|.. ConcreteFactory1
-    AbstractFactory <|.. ConcreteFactory2
+    ConcreteProductA1 ..|> ProductA
+    ConcreteProductA2 ..|> ProductA
+    ConcreteProductB1 ..|> ProductB
+    ConcreteProductB2 ..|> ProductB
     ProductA <.. AbstractFactory
     ProductB <.. AbstractFactory
+    AbstractFactory <|.. ConcreteFactory1
+    AbstractFactory <|.. ConcreteFactory2
     ConcreteProductA1 <.. ConcreteFactory1
     ConcreteProductB1 <.. ConcreteFactory1
     ConcreteProductA2 <.. ConcreteFactory2
