@@ -14,7 +14,7 @@ classDiagram
         +operation()
     }
     class SimpleFactory {
-        +factoryMethod() Product
+        +factoryMethod(string type) Product
     }
     Product <|-- ConcreteProductA 
     Product <|-- ConcreteProductB 
