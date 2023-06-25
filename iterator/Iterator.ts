@@ -1,5 +1,5 @@
-interface Iterator {
-  next(): string;
+interface Iterator<T> {
+  next(): T;
   hasNext(): boolean;
 }
 

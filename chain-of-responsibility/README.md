@@ -5,8 +5,8 @@ title: 责任链模式
 classDiagram
     class Handler {
         <<interface>>
-        +setNext(Handler handler) Handler
-        +handle(string request)
+        +setNext(Handler handler)* Handler
+        +handle(string request)*
     }
     class AbstractHandler {
         <<abstract>>

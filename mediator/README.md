@@ -5,7 +5,7 @@ title: 中介者模式
 classDiagram
     class Mediator {
         <<interface>>
-        +notify(sender: object, event: string)
+        +notify(object sender, string event)*
     }
     class ConcreteMediator {
         -Component1 component1

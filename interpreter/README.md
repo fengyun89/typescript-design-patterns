@@ -13,7 +13,7 @@ classDiagram
         +interpret(Context context) number
     }
     class TerminalExpression {
-        -string value
+        -string name
         +constructor(string name)
         +interpret(Context context) number
     }
@@ -30,12 +30,12 @@ classDiagram
         +interpret(Context context) number
     }
     Context <.. Expression
-    Context <.. TerminalExpression
-    Context <.. AddExpression
-    Context <.. SubtractExpression
     Expression <|.. TerminalExpression
     Expression <|.. AddExpression
     Expression <|.. SubtractExpression
     Expression <-- AddExpression
     Expression <-- SubtractExpression
+    Context <.. TerminalExpression
+    Context <.. AddExpression
+    Context <.. SubtractExpression
 ```

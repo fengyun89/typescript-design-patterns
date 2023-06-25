@@ -1,9 +1,9 @@
 import Handler from "./Handler";
 
 abstract class AbstractHandler implements Handler {
-  protected nextHandler: AbstractHandler;
+  protected nextHandler: Handler;
 
-  public setNext(handler: AbstractHandler): AbstractHandler {
+  public setNext(handler: Handler): Handler {
     this.nextHandler = handler;
     return handler;
   }

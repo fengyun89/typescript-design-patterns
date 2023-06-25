@@ -22,6 +22,5 @@ classDiagram
     }
     State <|-- ConcreteStateA 
     State <|-- ConcreteStateB 
-    State <--o Context 
-    Context <-- State 
+    State <--> Context 
 ```

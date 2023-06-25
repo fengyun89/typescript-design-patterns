@@ -2,14 +2,14 @@ import Expression from "./Expression";
 import Context from "./Context";
 
 class TerminalExpression implements Expression {
-  private value: string;
+  private name: string;
 
-  constructor(value: string) {
-    this.value = value;
+  constructor(name: string) {
+    this.name = name;
   }
 
   public interpret(context: Context): number {
-    return context.getVariable(this.value);
+    return context.getVariable(this.name);
   }
 }
 

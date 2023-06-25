@@ -5,8 +5,8 @@ title: 访问者模式
 classDiagram
     class Visitor {
         <<interface>>
-        +visitConcreteElementA(ConcreteElementA elementA)
-        +visitConcreteElementB(ConcreteElementB elementB)
+        +visitConcreteElementA(ConcreteElementA elementA)*
+        +visitConcreteElementB(ConcreteElementB elementB)*
     }
     class ConcreteVisitor1 {
         +visitConcreteElementA(ConcreteElementA elementA)
@@ -18,7 +18,7 @@ classDiagram
     }
     class Element {
         <<interface>>
-        +accept(Visitor visitor)
+        +accept(Visitor visitor)*
     }
     class ConcreteElementA {
         +accept(Visitor visitor)
@@ -26,15 +26,15 @@ classDiagram
     class ConcreteElementB {
         +accept(Visitor visitor)
     }
-    ConcreteElementA <.. Visitor
-    ConcreteElementB <.. Visitor
-    ConcreteElementA <.. ConcreteVisitor1
-    ConcreteElementB <.. ConcreteVisitor1
-    ConcreteElementA <.. ConcreteVisitor2
-    ConcreteElementB <.. ConcreteVisitor2
     Visitor <|.. ConcreteVisitor1
     Visitor <|.. ConcreteVisitor2
     Element <|.. ConcreteElementA
     Element <|.. ConcreteElementB
+    ConcreteElementA <.. Visitor
+    ConcreteElementB <.. Visitor
     Visitor <.. Element
+    ConcreteElementA <.. ConcreteVisitor1
+    ConcreteElementB <.. ConcreteVisitor1
+    ConcreteElementA <.. ConcreteVisitor2
+    ConcreteElementB <.. ConcreteVisitor2
 ```

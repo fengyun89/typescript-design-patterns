@@ -5,7 +5,7 @@ title: 策略模式
 classDiagram
     class Strategy {
         <<interface>>
-        +execute()
+        +execute()*
     }
     class ConcreteStrategyA {
         +execute()
@@ -14,11 +14,11 @@ classDiagram
         +execute()
     }
     class Context {
-        -strategy: Strategy
+        -Strategy strategy
         +setStrategy(Strategy strategy)
         +doSomeBusinessLogic()
     }
-    Strategy <|.. ConcreteStrategyA 
+    Strategy <|.. ConcreteStrategyA
     Strategy <|.. ConcreteStrategyB 
-    Strategy <--o Context 
+    Strategy <-- Context
 ```

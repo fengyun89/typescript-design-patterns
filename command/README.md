@@ -5,7 +5,7 @@ title: 命令模式
 classDiagram
     class Command{
         <<interface>>
-        +execute()
+        +execute()*
     }
     class SimpleCommand {
         +execute()
@@ -24,8 +24,8 @@ classDiagram
         +setOnFinish(Command command)
         +run()
     }
+    Command <-- Invoker
     Command <|.. SimpleCommand 
     Command <|.. ComplexCommand 
     Receiver <-- ComplexCommand 
-    Command <-- Invoker 
 ```

@@ -3,21 +3,28 @@
 title: 迭代器模式
 ---
 classDiagram
-    class Iterator {
+    class Iterator~T~ {
         <<interface>>
-        +next()
-        +hasNext()
+        +next()* T
+        +hasNext()* boolean
     }
-    class ConcteteIterator {
-        -collection
-        +next()
-        +hasNext()
+    class ConcreteIterator~T~ {
+        -Array~T~ collection
+        -number index
+        +next() T
+        +hasNext() boolean
     }
-    class Aggregate {
-        -collection
-        +addItem()
-        +getIterator() Iterator
+    class Aggregate~T~ {
+        <<interface>>
+        +getIterator()* Iterator~T~
     }
-    Iterator <|.. ConcteteIterator 
-    Iterator <-- Aggregate 
+    class ConcreteAggregate {
+        -Array~T~ collection
+        +addItem(T item)
+        +getIterator() ConcreteIterator~T~
+    }
+    Iterator <|.. ConcreteIterator
+    Aggregate <|.. ConcreteAggregate
+    Iterator <.. Aggregate
+    ConcreteIterator <.. ConcreteAggregate
 ```

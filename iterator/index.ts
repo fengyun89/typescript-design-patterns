@@ -1,6 +1,6 @@
-import Aggregate from "./Aggregate";
+import ConcreteAggregate from "./ConcreteAggregate";
 
-const aggregate = new Aggregate();
+const aggregate = new ConcreteAggregate<string>();
 aggregate.addItem("Item A");
 aggregate.addItem("Item B");
 aggregate.addItem("Item C");

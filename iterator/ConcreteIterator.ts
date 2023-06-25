@@ -1,14 +1,14 @@
 import Iterator from "./Iterator";
 
-class ConcteteIterator implements Iterator {
+class ConcreteIterator<T> implements Iterator<T> {
   private index: number = 0;
-  private collection: string[] = [];
+  private collection: T[] = [];
 
-  constructor(collection: string[]) {
+  constructor(collection: T[]) {
     this.collection = collection;
   }
 
-  public next(): string {
+  public next(): T {
     const result = this.collection[this.index];
     this.index += 1;
     return result;
@@ -19,4 +19,4 @@ class ConcteteIterator implements Iterator {
   }
 }
 
-export default ConcteteIterator;
+export default ConcreteIterator;
