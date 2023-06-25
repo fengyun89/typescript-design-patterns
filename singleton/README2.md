@@ -6,7 +6,6 @@ classDiagram
     class Singleton {
         -Singleton instance$
         -Singleton()
-        +getInstance()$ Singleton
     }
     Singleton <.. Singleton
 ```

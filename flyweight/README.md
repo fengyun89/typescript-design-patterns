@@ -4,6 +4,7 @@ title: 享元模式
 ---
 classDiagram
     class Flyweight {
+        <<interface>>
         +operation(extrinsicState)*
     }
     class ConcreteFlyweight {
@@ -11,7 +12,7 @@ classDiagram
         +operation(extrinsicState)
     }
     class FlyweightFactory {
-        -Map flyweights
+        -Map~string_Flyweight~ flyweights
         +getFlyweight(key)
         +listFlyweights()
     }

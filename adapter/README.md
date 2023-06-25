@@ -14,6 +14,6 @@ classDiagram
         -Adaptee adaptee
         +request()
     }
-    Adaptee<-- Adapter
     Target <|.. Adapter
+    Adaptee<-- Adapter
 ```

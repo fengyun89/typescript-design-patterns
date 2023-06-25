@@ -4,6 +4,7 @@ title: 装饰器模式
 ---
 classDiagram
     class Component{
+        <<interface>>
         +operation()*
     }
     class ConcreteComponent {
