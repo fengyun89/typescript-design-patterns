@@ -3,7 +3,7 @@ class Singleton {
 
   private constructor() {}
 
-  public static getInstance(): Singleton {
+  static getInstance(): Singleton {
     if (!Singleton.instance) {
       this.instance = new Singleton();
     }

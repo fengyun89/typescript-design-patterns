@@ -23,11 +23,12 @@ classDiagram
     }
     class Director {
         -builder Builder
-        +setBuilder(builder)
+        +setBuilder(Builder builder)
         +buildMinimalViableProduct()
         +buildFullFeaturedProduct()
     }
     Product <.. Builder
     Builder <|.. ConcreteBuilder
+    Product <-- ConcreteBuilder
     Builder <-- Director
 ```

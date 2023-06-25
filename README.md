@@ -21,9 +21,9 @@ pnpm tsx singleton
 关于对象创建的模式，称之为创建型模式
 
 - ✅保证一个类只有一个实例 [单例模式](./singleton/)
-- 不指定具体类名也可以创建对象 [简单工厂模式](./simple-factory/)、[工厂方法模式](./factory-method/)、[抽象工厂模式](./abstract-factory/)
-- 克隆已有对象 [原型模式](./prototype/)
-- 分步骤创建对象 [生成器模式](./builder/)
+- ✅对象的创建和使用分离 [简单工厂模式](./simple-factory/)、[工厂方法模式](./factory-method/)、[抽象工厂模式](./abstract-factory/)
+- ✅克隆已有对象 [原型模式](./prototype/)
+- ✅分步骤创建对象 [生成器模式](./builder/)
 
 关于组合类和对象的模式，称之为结构型模式
 

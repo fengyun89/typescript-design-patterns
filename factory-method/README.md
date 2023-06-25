@@ -18,10 +18,10 @@ classDiagram
         +factoryMethod()* Product
     }
     class ConcreteCreatorA {
-        +factoryMethod() Product
+        +factoryMethod() ConcreteProductA
     }
     class ConcreteCreatorB {
-        +factoryMethod() Product
+        +factoryMethod() ConcreteProductB
     }
     Product <|-- ConcreteProductA
     Product <.. Creator

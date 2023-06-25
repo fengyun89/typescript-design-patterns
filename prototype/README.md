@@ -10,5 +10,7 @@ classDiagram
     class ConcretePrototype {
         +clone() ConcretePrototype
     }
+    Prototype <.. Prototype
     Prototype <|.. ConcretePrototype
+    ConcretePrototype <.. ConcretePrototype
 ```

@@ -29,12 +29,12 @@ classDiagram
         +createProductB()* ProductB
     }
     class ConcreteFactory1 {
-        +createProductA() ProductA
-        +createProductB() ProductB
+        +createProductA() ConcreteProductA1
+        +createProductB() ConcreteProductB1
     }
     class ConcreteFactory2 {
-        +createProductA() ProductA
-        +createProductB() ProductB
+        +createProductA() ConcreteProductA2
+        +createProductB() ConcreteProductB2
     }
     ConcreteProductA1 ..|> ProductA
     ConcreteProductA2 ..|> ProductA

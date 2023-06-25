@@ -14,10 +14,10 @@ classDiagram
         +operation()
     }
     class SimpleFactory {
-        +factoryMethod(string type) Product
+        +createProduct(string type) Product
     }
-    Product <|-- ConcreteProductA 
-    Product <|-- ConcreteProductB 
-    ConcreteProductA <.. SimpleFactory 
-    ConcreteProductB <.. SimpleFactory 
+    Product <|-- ConcreteProductA
+    Product <|-- ConcreteProductB
+    ConcreteProductA <.. SimpleFactory
+    ConcreteProductB <.. SimpleFactory
 ```
